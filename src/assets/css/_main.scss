@@ -6,6 +6,7 @@
   padding: 0;
   font-family: $main-font;
 }
+
 .main-container-bg {
   position: absolute;
   height: max-content;
@@ -13,14 +14,22 @@
   top: 0;
   z-index: 6;
 }
+
 .main-container-bg-child {
   position: relative;
 }
 
 // the bg variable
-$container-bg-left: -15%, 0, 55%;
-$container-bg-size: max-content, 90%, 45%;
-$container-bg-zindex: 3, 2, 1;
+$container-bg-left: -5%,
+0,
+55%;
+$container-bg-size: 20%,
+90%,
+45%;
+$container-bg-zindex: 3,
+2,
+1;
+
 // this code will change left position with $container-bg-left
 @for $item from 1 through length($container-bg-left) {
   .container-bg:nth-child(#{$item}) {
@@ -35,21 +44,78 @@ $container-bg-zindex: 3, 2, 1;
   top: 0;
 }
 
+
+.main-container-bg-items {
+  position: absolute;
+  height: max-content;
+  width: 100%;
+  top: 0;
+  z-index: 7;
+}
+
+.main-container-bg-items-child {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+
+$container-element-left: 3%,
+30%,
+50%,
+70%,
+80%,
+65%,
+43%,
+25%;
+$container-element-top:20%,
+15%,
+10%,
+20%,
+40%,
+70%,
+80%,
+70%;
+$container-element-width:25%,
+10%,
+7%,
+10%,
+7%,
+7%,
+7%,
+10%;
+
+// this code will change left position with $container-bg-left
+@for $item from 1 through length($container-element-left) {
+  .container-element:nth-child(#{$item}) {
+    left: nth($container-element-left, $item);
+    top: nth($container-element-top, $item);
+    width: nth($container-element-width, $item);
+  }
+}
+
+.container-element {
+  position: absolute;
+}
+
 .main-container {
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: 9;
 }
+
 .main-container-content {
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: 8;
 }
+
 .cnt1 {
   @include cnt1;
 }
+
 .cnt2 {
   @include cnt2;
 }
@@ -57,43 +123,75 @@ $container-bg-zindex: 3, 2, 1;
 .main-container-box {
   width: 80%;
   height: max-content;
-  background-color: red;
+
   text-align: center;
   display: inline-block;
 }
+
 .main-container-box-title h1 {
   font-weight: normal;
   font-size: 3em;
+  color: $main-title;
 }
+
 .main-container-box-description p {
   display: inline-block;
-  width: 40%;
+  width: 500px;
+  color: $main-description;
 }
+
 .main-container-box-buttons {
   margin: 3%;
 }
+
 .main-container-box-buttons a {
-  padding: 1%;
+  padding: 1% 3% 1% 3%;
   margin: 1%;
   background-color: $main-pallet-1;
   text-decoration: none;
   border-radius: 30px;
   color: $main-text-1;
 }
+
 .main-container-box-buttons a:nth-child(2) {
   background-color: $main-pallet-2;
 }
 
 /* Responsive */
 @media screen and (max-width: 700px) {
+
+  /* container start */
   .main-container-box-buttons {
     margin-top: 15%;
     margin-bottom: 5%;
   }
+
   .main-container-box-buttons a {
     padding: 4%;
   }
+
   .main-container-box-description p {
     width: 100%;
   }
+
+  .container-bg:nth-child(1) {
+    width: 80%;
+    height: 50vh;
+
+
+  }
+
+  .container-bg:nth-child(2) {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+  }
+
+  .container-element {
+    display: none;
+  }
+
+  /* container end */
+
 }

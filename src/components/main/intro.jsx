@@ -21,17 +21,53 @@ class Intro extends Component {
             <div className="main-container-bg-child">
               <img
                 className="container-bg"
-                src={require("../../assets/images/layer-orange.png")}
+                src={require("../../assets/images/background/layer-orange.png")}
               />
 
               <img
                 className="container-bg"
-                src={require("../../assets/images/layer-cream.png")}
+                src={require("../../assets/images/background/layer-cream.png")}
               />
 
               <img
                 className="container-bg"
-                src={require("../../assets/images/layer-blue.png")}
+                src={require("../../assets/images/background/layer-blue.png")}
+              />
+            </div>
+          </div>
+          <div className="main-container-bg-items">
+            <div className="main-container-bg-items-child">
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/cloud.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/wifi.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/message.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/coins.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/person.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/secure.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/wallet.png")}
+              />
+              <img
+                className="container-element"
+                src={require("../../assets/images/elements/laptop.png")}
               />
             </div>
           </div>
