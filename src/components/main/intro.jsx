@@ -17,7 +17,24 @@ class Intro extends Component {
     return (
       <React.Fragment>
         <div className="main-container">
-          <div className="main-container-bg"></div>
+          <div className="main-container-bg">
+            <div className="main-container-bg-child">
+              <img
+                className="container-bg"
+                src={require("../../assets/images/layer-orange.png")}
+              />
+
+              <img
+                className="container-bg"
+                src={require("../../assets/images/layer-cream.png")}
+              />
+
+              <img
+                className="container-bg"
+                src={require("../../assets/images/layer-blue.png")}
+              />
+            </div>
+          </div>
           <div className="main-container-content">
             <div className="cnt1">
               <div className="cnt2">
