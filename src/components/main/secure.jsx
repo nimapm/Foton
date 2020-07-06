@@ -65,6 +65,7 @@ class Secure extends Component {
               <div className="cnt1">
                 <div className="cnt2">
                   <img
+                    className="secure-img"
                     src={require("../../assets/images/elements/mobile-robot.png")}
                   />
                 </div>
