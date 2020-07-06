@@ -19,10 +19,10 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin section {
+@mixin section($height:100vh) {
 
   width: 100%;
-  height: 100vh;
+  height: $height;
   position: relative;
   text-align: center;
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 // Colors
 $main-white: #fff;
@@ -11,6 +12,9 @@ $main-lightBlue: rgb(123, 185, 255);
 
 // Fonts
 $main-font: "Poppins";
+$main-font-description:'Nunito',
+sans-serif;
+;
 
 // secondry variables
 $main-title: $main-blue;
