@@ -11,8 +11,8 @@ $main-heavyBlue: rgb(85, 128, 255);
 $main-lightBlue: rgb(123, 185, 255);
 
 // Fonts
-$main-font: "Poppins";
-$main-font-description:'Nunito',
+$main-font-1: "Poppins";
+$main-font-2:'Nunito',
 sans-serif;
 ;
 
@@ -25,6 +25,12 @@ $main-pallet-1: $main-orange;
 
 // pallet 2
 $main-pallet-2: $main-heavyBlue;
+
+
+//fonts
+$main-font: $main-font-1;
+$main-font-description : $main-font-2;
+
 
 // text colors
 $main-text-1: $main-white;
