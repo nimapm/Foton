@@ -185,7 +185,7 @@ $container-element-width:25%,
   position: absolute;
 
   span {
-    font-size: 15vw;
+    font-size: 14vw;
     margin-left: 5%;
     font-family: $main-font;
     font-weight: bold;
@@ -251,6 +251,7 @@ $container-element-width:25%,
     font-size: 2.8em;
     font-weight: normal;
     color: $main-title;
+    white-space: pre-wrap;
   }
 }
 
@@ -259,6 +260,8 @@ $container-element-width:25%,
   p {
     font-family: $main-font-description;
     font-size: 1.2em;
+    margin-top: 2%;
+
   }
 }
 

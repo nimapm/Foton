@@ -3,8 +3,17 @@ import React, { Component } from "react";
 import style from "../../assets/css/_main.scss";
 
 class Secure extends Component {
-  state = {};
+  state = {
+    title: "Accessing your \ndata like never before",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis egestas ante, sed viverra nunc tincidunt nec nteger nonsed condimntum elit, sit amet feugiat lorem. Proin tempus sagittis velit vitae scelerisque.",
+    image: require("../../assets/images/elements/mobile-robot.png"),
+    personName: "Erin Boettcher",
+    personTitle: "Web Developer",
+  };
   render() {
+    const { title, description, image, personName, personTitle } = this.state;
+
     return (
       <React.Fragment>
         <div class="main-secure">
@@ -27,17 +36,10 @@ class Secure extends Component {
                 <div className="cnt2">
                   <div className="main-secure-left-child-box">
                     <div className="main-secure-left-top">
-                      <h4>
-                        Accessing your <br /> data like never before
-                      </h4>
+                      <h4>{title}</h4>
                     </div>
                     <div className="main-secure-left-middle">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In sagittis egestas ante, sed viverra nunc tincidunt nec
-                        nteger nonsed condimntum elit, sit amet feugiat lorem.
-                        Proin tempus sagittis velit vitae scelerisque.
-                      </p>
+                      <p>{description}</p>
                     </div>
                     <div className="main-secure-left-bottom">
                       <div className="main-secure-left-bottom-box">
@@ -49,8 +51,8 @@ class Secure extends Component {
                         <div className="main-secure-left-bottom-box-right">
                           <div className="cnt1">
                             <div className="cnt2">
-                              <p>Erin Boettcher</p>
-                              <p>Web Developer</p>
+                              <p>{personName}</p>
+                              <p>{personTitle}</p>
                             </div>
                           </div>
                         </div>
@@ -64,10 +66,7 @@ class Secure extends Component {
             <div className="main-secure-content-box secure-right">
               <div className="cnt1">
                 <div className="cnt2">
-                  <img
-                    className="secure-img"
-                    src={require("../../assets/images/elements/mobile-robot.png")}
-                  />
+                  <img className="secure-img" src={image} />
                 </div>
               </div>
             </div>
