@@ -30,22 +30,22 @@ class MainServices extends Component {
 
       {
         image: require("../../assets/images/logo/ninja.png"),
-        name: "Slider Revolution",
+        name: "Woo Commerce",
       },
 
       {
         image: require("../../assets/images/logo/mobile.png"),
-        name: "Slider Revolution",
+        name: "Fully Responsive",
       },
 
       {
         image: require("../../assets/images/logo/jet.png"),
-        name: "Slider Revolution",
+        name: "Fully Responsive",
       },
 
       {
         image: require("../../assets/images/logo/a.png"),
-        name: "Slider Revolution",
+        name: "Two Free Plugins",
       },
     ],
   };

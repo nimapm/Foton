@@ -475,7 +475,11 @@ $container-element-width:25%,
   border: 1px solid #dde7ff;
   backface-visibility: hidden;
 
-  transition: 0.5s all;
+  transition: 0.2s all;
+
+
+  padding-top: 2%;
+  padding-bottom: 2%;
 
   .main-services-cnt-left {
     width: 40%;
@@ -512,6 +516,7 @@ $container-element-width:25%,
   color: $main-blue;
   font-size: 1.2em;
   cursor: default;
+  margin-top: 5%;
 }
 
 /* Main services  end */
@@ -684,6 +689,8 @@ $container-element-width:25%,
     padding-bottom: 13%;
     text-align: center;
     display: table;
+
+
 
   }
 
