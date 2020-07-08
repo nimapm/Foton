@@ -58,7 +58,7 @@ class Unique extends Component {
                         </p>
                       </div>
                       <div className="unique-right-cnt-bottom">
-                        {/* {statistics.map((s) => (
+                        {statistics.map((s) => (
                           <div className="unique-right-cnt-bottom-statistics">
                             <div className="cnt1">
                               <div className="cnt2">
@@ -73,22 +73,7 @@ class Unique extends Component {
                               </div>
                             </div>
                           </div>
-                        ))} */}
-
-                        <div className="unique-right-cnt-bottom-statistics">
-                          <div className="cnt1">
-                            <div className="cnt2">
-                              <div className="unique-right-cnt-bottom-statistics-box">
-                                <div className="unique-right-cnt-bottom-statistics-top">
-                                  <span>927</span>
-                                </div>
-                                <div className="unique-right-cnt-bottom-statistics-bottom">
-                                  <span>HAPPY CLIENTS</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   </div>
