@@ -508,7 +508,49 @@ $container-element-width:25%,
 
   .main-secure-left-bottom-box-right {
     width: max-content;
+
   }
 
   /* secure end */
+
+  /* digital agency start  */
+
+
+  .digital-agency {
+    height: 90vh;
+  }
+
+  .digital-agency-bg {
+    display: none;
+  }
+
+  .digital-agency-content-box-right {
+    width: 100%;
+  }
+
+  .agency-left {
+    display: none !important;
+  }
+
+  .digital-agency-content-box-right-top h4 {
+    text-align: center !important;
+    font-size: 2em;
+  }
+
+  .digital-agency-content-box-right-middle p {
+    text-align: center;
+  }
+
+  .digital-agency-content-box-right-bottom {
+    text-align: center;
+    margin: 10% 0%;
+  }
+
+
+  .agency-right {
+
+    width: 90% !important;
+  }
+
+  /* digital agency end  */
 }

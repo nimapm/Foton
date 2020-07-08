@@ -5,9 +5,10 @@ class DigitalAgency extends Component {
     title: "Digital Agency Service Providers of Future",
     description:
       "Quisque ac dolor nec nisl pellentesque ullamc. Vestibulum sed ultrices mi morbi dignissim. ",
+    link: "#",
   };
   render() {
-    const { title, description } = this.state;
+    const { title, description, link } = this.state;
     return (
       <React.Fragment>
         <div className="digital-agency">
@@ -44,7 +45,7 @@ class DigitalAgency extends Component {
                   </div>
 
                   <div className="digital-agency-content-box-right-bottom">
-                    <a href="#">Read More</a>
+                    <a href={link}>Read More</a>
                   </div>
                 </div>
               </div>
