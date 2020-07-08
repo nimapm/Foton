@@ -189,7 +189,7 @@ $container-element-width:25%,
     margin-left: 5%;
     font-family: $main-font;
     font-weight: bold;
-    color: rgb(239, 243, 255);
+    color: $main-softBlue;
     letter-spacing: -8px;
   }
 
@@ -520,6 +520,184 @@ $container-element-width:25%,
 }
 
 /* Main services  end */
+
+
+/* main unique start */
+
+.unique {
+  @include section(130vh);
+}
+
+.unique-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 7;
+
+}
+
+
+.unique-bg-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.unique-bg-text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  span {
+    font-family: $main-font;
+    font-size: 13vw;
+    font-weight: bold;
+    letter-spacing: -8px;
+    margin-left: 5%;
+    color: $main-softBlue;
+  }
+}
+
+.unique-bg-image {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: -5%;
+    top: 10%;
+    width: 30%;
+  }
+}
+
+.unique-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 9;
+}
+
+.unique-content-box {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .unique-content-box-child {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+
+  }
+
+  .unique-left {
+    width: 60%;
+  }
+
+  .unique-right {
+    width: 40%;
+  }
+}
+
+
+.unique-content-box-left-image {
+  text-align: left;
+  width: 100%;
+  height: max-content;
+
+  img {
+    width: 90%;
+    margin-top: -5%;
+  }
+}
+
+
+.unique-content-box-right-cnt {
+  width: 100%;
+  height: max-content;
+  text-align: left;
+
+  .unique-right-cnt-top {
+    width: 100%;
+    text-align: left;
+
+    h4 {
+      font-size: 3em;
+      font-weight: normal;
+      font-family: $main-font;
+      color: $main-blue;
+    }
+  }
+
+  .unique-right-cnt-middle {
+    width: 100%;
+    text-align: left;
+
+    p {
+      line-height: 35px;
+      width: 85%;
+      display: inline-block;
+      font-size: 1.3em;
+      font-family: $main-font-description;
+      color: $main-grey;
+    }
+
+  }
+
+  .unique-right-cnt-bottom {
+    width: 100%;
+    text-align: left;
+    margin-top: 2%;
+
+    .unique-right-cnt-bottom-statistics {
+      width: 30%;
+      height: 100%;
+      display: inline-block;
+      text-align: center;
+
+
+      .unique-right-cnt-bottom-statistics-box {
+        width: 100%;
+        height: 100%;
+
+        .unique-right-cnt-bottom-statistics-top {
+          width: 100%;
+          height: 80%;
+          text-align: center;
+
+          span {
+            font-size: 3em;
+            color: $main-title;
+            font-family: $main-font;
+          }
+
+        }
+
+        .unique-right-cnt-bottom-statistics-bottom {
+          width: 100%;
+          height: 20%;
+          text-align: center;
+
+          span {
+            color: $main-title;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+/* main unique end*/
+
+
 
 /* Responsive */
 @media screen and (max-width: 700px) {
