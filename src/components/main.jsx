@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Intro from "./main/intro";
 import Secure from "./main/secure";
 import DigitalAgency from "./main/digital-agency";
+import MainServices from "./main/main-services";
 
 class Main extends Component {
   state = {};
@@ -13,6 +14,7 @@ class Main extends Component {
         <Intro />
         <Secure />
         <DigitalAgency />
+        <MainServices />
       </React.Fragment>
     );
   }

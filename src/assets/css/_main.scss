@@ -412,6 +412,110 @@ $container-element-width:25%,
 
 /* digital agency end */
 
+/* Main services  start */
+
+.main-services {
+
+  @include section;
+
+}
+
+
+
+.main-services-top {
+  width: 100%;
+  height: 35%;
+  text-align: center;
+
+}
+
+
+.main-services-top-box {
+  width: 100%;
+}
+
+.main-services-title {
+  font-family: $main-font;
+  font-size: 2.8em;
+  font-weight: normal;
+  color: $main-blue;
+  margin-top: 8vw;
+}
+
+.main-services-description {
+  font-family: $main-font-description;
+  font-size: 1.2em;
+  font-weight: normal;
+  display: inline-block;
+  width: 700px;
+  margin-top: 1%;
+  color: $main-grey;
+}
+
+.main-services-bottom {
+  width: 100%;
+  height: 65%;
+  text-align: center;
+}
+
+.main-services-bottom-box {
+  width: 95%;
+  height: 100%;
+  display: inline-block;
+}
+
+
+.main-services-cnt {
+  width: 22%;
+  height: 30%;
+  display: inline-block;
+  margin: 1%;
+  vertical-align: top;
+  border-radius: 10px;
+  border: 1px solid #dde7ff;
+  backface-visibility: hidden;
+
+  transition: 0.5s all;
+
+  .main-services-cnt-left {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+
+    vertical-align: top;
+
+  }
+
+  .main-services-cnt-right {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+
+
+  }
+}
+
+.main-services-cnt:hover {
+  margin-top: -0.5%;
+  border: transparent;
+  box-shadow: 0 10px 55px 5px rgba(137, 173, 255, .35);
+}
+
+
+.main-services-cnt-right-img {
+  width: 60%;
+}
+
+.main-services-cnt-right-p {
+  text-align: left;
+  margin-left: 10%;
+  color: $main-blue;
+  font-size: 1.2em;
+  cursor: default;
+}
+
+/* Main services  end */
+
 /* Responsive */
 @media screen and (max-width: 700px) {
 
@@ -553,4 +657,55 @@ $container-element-width:25%,
   }
 
   /* digital agency end  */
+
+
+  /* services start */
+  .main-services {
+    height: max-content;
+  }
+
+  .main-services-description {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .main-services-bottom-box-child {
+    height: max-content;
+
+    display: inline-block !important;
+  }
+
+  .main-services-cnt {
+    width: 100%;
+    margin-bottom: 5%;
+    margin-left: 0;
+    /* height: 15%; */
+    padding-top: 13%;
+    padding-bottom: 13%;
+    text-align: center;
+    display: table;
+
+  }
+
+  .main-services-cnt:hover {
+    margin: 0%;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid #dde7ff;
+    background-color: $main-lightBlue;
+  }
+
+  .main-services-cnt-right {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .main-services-cnt-right-p {
+
+    margin-right: 10%;
+  }
+
+  /* services end */
 }
