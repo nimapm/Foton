@@ -6,6 +6,7 @@ import Secure from "./main/secure";
 import DigitalAgency from "./main/digital-agency";
 import MainServices from "./main/main-services";
 import Unique from "./main/unique";
+import ProtectedData from "./main/protect-data";
 
 class Main extends Component {
   state = {};
@@ -17,6 +18,7 @@ class Main extends Component {
         <DigitalAgency />
         <MainServices />
         <Unique />
+        <ProtectedData />
       </React.Fragment>
     );
   }
