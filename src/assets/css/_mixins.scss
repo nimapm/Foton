@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin cnt1 {
   width: 100%;
   height: 100%;
@@ -26,4 +28,12 @@
   position: relative;
   text-align: center;
 
+}
+
+@mixin readMore {
+  padding: 2% 5%;
+  background-color: $main-orange;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
 }
