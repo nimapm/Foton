@@ -12,39 +12,48 @@
     text-align: left;
 }
 
+.cnt-bottom {
+    vertical-align: bottom;
+}
+
+.cnt-top {
+    vertical-align: top;
+}
+
 /* prices start */
 
 .prices {
     @include section;
-    background-color: darkcyan;
 }
 
 .price-box {
     width: 26%;
     height: 80%;
-    background-color: darkgreen;
     display: inline-block;
-    margin: 0.5%;
+    margin: 1%;
     vertical-align: top;
+    border-radius: 10px;
+    transition: 1s all;
+    box-shadow: 0 0 20px transparentize($color: $main-orange, $amount: 0.7);
 
     .price-box-left {
-        width: 35%;
+        width: 34%;
         height: 100%;
         display: inline-block;
         vertical-align: top;
-        background-color: darkkhaki;
+        border-radius: 10px 0px 0px 10px;
+        padding-right: 1%;
 
+        transition: 1s all;
 
         .price-box-left-top {
             width: 100%;
             height: max-content;
             text-align: right;
-            background-color: darkgoldenrod;
 
             .price-box-left-top-span {
                 font-size: 4em;
-                font-family: $main-font;
-                font-weight: normal;
+                font-weight: lighter;
                 color: $main-blue;
             }
 
@@ -54,7 +63,6 @@
             width: 100%;
             height: max-content;
             text-align: right;
-            background-color: darkgray;
 
             span {
                 color: $main-blue;
@@ -68,34 +76,49 @@
         height: 100%;
         display: inline-block;
         vertical-align: top;
-        background-color: darkred;
+
 
         .price-box-right-top {
             width: 100%;
             height: 30%;
             text-align: left;
-            background-color: darkslategray;
+
         }
 
         .price-box-right-middle {
             width: 100%;
             height: 50%;
             text-align: left;
-            background-color: darkviolet;
+
         }
 
         .price-box-right-bottom {
             width: 100%;
             height: 20%;
             text-align: left;
-            background-color: darkblue;
 
-
+            .cnt1 {
+                .cnt2 {
+                    .read-more-btn {
+                        margin-left: 5%;
+                    }
+                }
+            }
 
         }
     }
 }
 
+.price-box:hover {
+    box-shadow: 0 0 55px transparentize($color: $main-lightBlue, $amount: 0.5);
+    background-color: $main-white;
+    margin-top: -0.1%;
+
+    .price-box-left {
+        background-color: $main-white;
+    }
+
+}
 
 .price-box-right-top-box {
     width: 100%;
@@ -109,6 +132,7 @@
         margin-left: 5%;
         font-weight: normal;
         color: $main-blue;
+        font-weight: 600;
     }
 }
 
@@ -116,10 +140,15 @@
     width: 100%;
     height: max-content;
     text-align: left;
+    margin-top: 10%;
 
     ul {
         list-style-type: none;
         margin-left: 5%;
         line-height: 35px;
+
+        li {
+            color: $main-blue;
+        }
     }
 }
