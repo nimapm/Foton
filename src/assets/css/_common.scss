@@ -110,7 +110,7 @@
 }
 
 .price-box:hover {
-    box-shadow: 0 0 55px transparentize($color: $main-lightBlue, $amount: 0.5);
+    box-shadow: 0 0 55px transparentize($color: $main-lightBlue, $amount: 0.55);
     background-color: $main-white;
     margin-top: -0.1%;
 
