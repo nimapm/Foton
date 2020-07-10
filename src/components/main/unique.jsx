@@ -4,6 +4,9 @@ import style from "../../assets/css/_main.scss";
 
 class Unique extends Component {
   state = {
+    title: "Smart and flexible",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis egestas ante, sed viverra nunc tincidunt nec. Integer non condimentum elit, sit amet feugiat lorem.",
     statistics: [
       { name: "HAPPY CLIENTS", score: "927" },
       { name: "HAPPY CLIENTS", score: "927" },
@@ -11,7 +14,7 @@ class Unique extends Component {
     ],
   };
   render() {
-    const { statistics } = this.state;
+    const { title, description, statistics } = this.state;
 
     return (
       <React.Fragment>
@@ -47,15 +50,10 @@ class Unique extends Component {
                   <div className="cnt2">
                     <div className="unique-content-box-right-cnt">
                       <div className="unique-right-cnt-top">
-                        <h4>Smart and flexible</h4>
+                        <h4>{title}</h4>
                       </div>
                       <div className="unique-right-cnt-middle">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. In sagittis egestas ante, sed viverra nunc
-                          tincidunt nec. Integer non condimentum elit, sit amet
-                          feugiat lorem.
-                        </p>
+                        <p>{description}</p>
                       </div>
                       <div className="unique-right-cnt-bottom">
                         {statistics.map((s) => (

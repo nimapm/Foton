@@ -1053,4 +1053,142 @@ $container-element-width:25%,
 
 
   /* services end */
+
+  /* unique start */
+
+
+  .unique-bg-text {
+    display: none;
+  }
+
+  .unique-bg-image {
+
+    img {
+      width: 98%;
+      top: 20%;
+    }
+  }
+
+  .unique-content-box {
+    .unique-left {
+      display: none;
+    }
+
+  }
+
+  .unique-content-box {
+    .unique-right {
+      width: 90%;
+      text-align: center;
+    }
+
+  }
+
+  .unique-content-box-right-cnt {
+
+    .unique-right-cnt-top {
+      text-align: center;
+      margin-bottom: 5%;
+
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+
+    .unique-right-cnt-middle {
+      text-align: center;
+
+      p {
+        width: 90%;
+      }
+    }
+
+    .unique-right-cnt-bottom {
+      margin-top: 10%;
+      text-align: center;
+    }
+  }
+
+
+
+  .unique-content-box-right-cnt {
+
+    .unique-right-cnt-bottom {
+      .unique-right-cnt-bottom-statistics {
+        width: 80%;
+        margin-bottom: 5%;
+      }
+    }
+
+  }
+
+
+
+  /* unique end */
+
+
+  /* protected data start */
+  .protected-data {
+    margin-top: 10%;
+  }
+
+  .protected-data-bg {
+    display: none;
+  }
+
+  .protected-data-content {
+
+    .protected-left {
+      width: 100%;
+      height: max-content;
+      margin-bottom: 15%;
+
+    }
+
+    .protected-right {
+      width: 100%;
+      height: max-content;
+    }
+  }
+
+  .protected-left {
+    .cnt1 {
+      .cnt2 {
+        text-align: center;
+
+        .protected-data-box-left {
+          margin-right: 0;
+          width: 80%;
+
+          .protected-data-cnt-top {
+            text-align: center;
+
+            h4 {
+              font-size: 2em;
+              line-height: 40px !important;
+
+            }
+          }
+
+          .protected-data-cnt-middle {
+            text-align: center;
+            margin-top: 5%;
+
+            p {
+              font-size: 1.5em;
+              line-height: 40px;
+            }
+          }
+
+          .protected-data-cnt-bottom {
+            text-align: center;
+            margin-bottom: 10%;
+          }
+        }
+      }
+    }
+  }
+
+
+  /* protected data end  */
 }
