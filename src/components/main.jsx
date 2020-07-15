@@ -20,7 +20,7 @@ class Main extends Component {
         <MainServices />
         <Unique />
         <ProtectedData />
-        <Prices />
+        {/* <Prices /> */}
       </React.Fragment>
     );
   }
