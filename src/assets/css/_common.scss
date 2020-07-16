@@ -31,10 +31,13 @@
     width: 100%;
     height: 100%;
 
-    .cnt1 {
-        .cnt2 {
-            .price-box-parent-child {
 
+    .price-box-parent-child {
+        width: 100%;
+        height: 100%;
+
+        .cnt1 {
+            .cnt2 {
                 .price-box {
                     width: 26%;
                     height: 80%;
@@ -127,12 +130,12 @@
 }
 
 .price-box:hover {
-    box-shadow: 0 0 55px transparentize($color: $main-lightBlue, $amount: 0.55);
-    background-color: $main-white;
-    margin-top: -0.1%;
+    box-shadow: 0 0 55px transparentize($color: $main-lightBlue, $amount: 0.55) !important;
+    background-color: $main-white !important;
+    margin-top: -0.1% !important;
 
     .price-box-left {
-        background-color: $main-white;
+        background-color: $main-white !important;
     }
 
 }
@@ -183,14 +186,15 @@
         width: 100%;
         height: 100%;
 
-        .cnt1 {
-            .cnt2 {
-                .price-box-parent-child {
-                    height: max-content;
-                    display: inline-block !important;
-                    text-align: center;
-                    margin-top: 20%;
 
+        .price-box-parent-child {
+            height: max-content;
+            display: inline-block !important;
+            text-align: center;
+            margin-top: 20%;
+
+            .cnt1 {
+                .cnt2 {
                     .price-box {
                         width: 90%;
                         height: 70vh;

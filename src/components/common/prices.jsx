@@ -52,9 +52,9 @@ class Prices extends Component {
           {/* */}
 
           <div className="price-box-parent">
-            <div className="cnt1">
-              <div className="cnt2">
-                <div className="price-box-parent-child">
+            <div className="price-box-parent-child">
+              <div className="cnt1">
+                <div className="cnt2">
                   {prices.map((price, index) => (
                     <div key={"price" + index} className="price-box">
                       <div className="price-box-left">
