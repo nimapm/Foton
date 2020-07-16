@@ -26,87 +26,104 @@
     @include section;
 }
 
-.price-box {
-    width: 26%;
-    height: 80%;
-    display: inline-block;
-    margin: 1%;
-    vertical-align: top;
-    border-radius: 10px;
-    transition: 1s all;
-    box-shadow: 0 0 20px transparentize($color: $main-orange, $amount: 0.7);
+.price-box-parent {
 
-    .price-box-left {
-        width: 34%;
-        height: 100%;
-        display: inline-block;
-        vertical-align: top;
-        border-radius: 10px 0px 0px 10px;
-        padding-right: 1%;
+    width: 100%;
+    height: 100%;
 
-        transition: 1s all;
+    .cnt1 {
+        .cnt2 {
+            .price-box-parent-child {
 
-        .price-box-left-top {
-            width: 100%;
-            height: max-content;
-            text-align: right;
+                .price-box {
+                    width: 26%;
+                    height: 80%;
+                    display: inline-block;
+                    margin: 1%;
+                    vertical-align: top;
+                    border-radius: 10px;
+                    transition: 1s all;
+                    box-shadow: 0 0 20px transparentize($color: $main-orange, $amount: 0.7);
 
-            .price-box-left-top-span {
-                font-size: 4em;
-                font-weight: lighter;
-                color: $main-blue;
-            }
+                    .price-box-left {
+                        width: 34%;
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: top;
+                        border-radius: 10px 0px 0px 10px;
+                        padding-right: 1%;
 
-        }
+                        transition: 1s all;
 
-        .price-box-left-bottom {
-            width: 100%;
-            height: max-content;
-            text-align: right;
+                        .price-box-left-top {
+                            width: 100%;
+                            height: max-content;
+                            text-align: right;
 
-            span {
-                color: $main-blue;
-            }
-        }
+                            .price-box-left-top-span {
+                                font-size: 4em;
+                                font-weight: lighter;
+                                color: $main-blue;
+                            }
 
-    }
+                        }
 
-    .price-box-right {
-        width: 65%;
-        height: 100%;
-        display: inline-block;
-        vertical-align: top;
+                        .price-box-left-bottom {
+                            width: 100%;
+                            height: max-content;
+                            text-align: right;
+
+                            span {
+                                color: $main-blue;
+                            }
+                        }
+
+                    }
+
+                    .price-box-right {
+                        width: 65%;
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: top;
 
 
-        .price-box-right-top {
-            width: 100%;
-            height: 30%;
-            text-align: left;
+                        .price-box-right-top {
+                            width: 100%;
+                            height: 30%;
+                            text-align: left;
 
-        }
+                        }
 
-        .price-box-right-middle {
-            width: 100%;
-            height: 50%;
-            text-align: left;
+                        .price-box-right-middle {
+                            width: 100%;
+                            height: 50%;
+                            text-align: left;
 
-        }
+                        }
 
-        .price-box-right-bottom {
-            width: 100%;
-            height: 20%;
-            text-align: left;
+                        .price-box-right-bottom {
+                            width: 100%;
+                            height: 20%;
+                            text-align: left;
 
-            .cnt1 {
-                .cnt2 {
-                    .read-more-btn {
-                        margin-left: 5%;
+                            .cnt1 {
+                                .cnt2 {
+                                    .read-more-btn {
+                                        margin-left: 5%;
+                                    }
+                                }
+                            }
+
+                        }
                     }
                 }
             }
 
         }
     }
+
+
+
 }
 
 .price-box:hover {
@@ -151,4 +168,55 @@
             color: $main-blue;
         }
     }
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+
+
+
+
+    .price-box-parent {
+
+        width: 100%;
+        height: 100%;
+
+        .cnt1 {
+            .cnt2 {
+                .price-box-parent-child {
+                    height: max-content;
+                    display: inline-block !important;
+                    text-align: center;
+                    margin-top: 20%;
+
+                    .price-box {
+                        width: 90%;
+                        height: 70vh;
+                        display: inline-block;
+                        padding-top: 15%;
+                        padding-bottom: 15%;
+                        margin-bottom: 10%;
+
+                        .price-box-left {
+
+                            .price-box-left-bottom {
+                                span {
+                                    margin-left: 5%;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
 }

@@ -49,58 +49,62 @@ class Prices extends Component {
     return (
       <React.Fragment>
         <div className="prices">
-          <div className="cnt1">
-            <div className="cnt2">
-              {/* */}
-              {prices.map((price, index) => (
-                <div key={"price" + index} className="price-box">
-                  <div className="price-box-left">
-                    <div className="price-box-left-top">
-                      <span className="price-box-left-top-span">
-                        <sup>$</sup>
-                        {price.price}
-                      </span>
-                    </div>
-                    <div className="price-box-left-bottom">
-                      <span>EVERY MONTH OR YEARLY</span>
-                    </div>
-                  </div>
-                  <div className="price-box-right">
-                    <div className="price-box-right-top">
-                      <div className="cnt1">
-                        <div className="cnt2 cnt-bottom">
-                          <div className="price-box-right-top-box">
-                            <h6>{price.title}</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="price-box-right-middle">
-                      <div className="cnt1">
-                        <div className="cnt2 cnt-top">
-                          <div className="price-box-right-middle-box">
-                            <ul>
-                              {price.service.map((priceListItem) => (
-                                <li>{priceListItem}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="price-box-right-bottom">
-                      <div className="cnt1">
-                        <div className="cnt2 cnt-left">
-                          <a href={price.link} className="read-more-btn">
-                            Read More
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          {/* */}
 
+          <div className="price-box-parent">
+            <div className="cnt1">
+              <div className="cnt2">
+                <div className="price-box-parent-child">
+                  {prices.map((price, index) => (
+                    <div key={"price" + index} className="price-box">
+                      <div className="price-box-left">
+                        <div className="price-box-left-top">
+                          <span className="price-box-left-top-span">
+                            <sup>$</sup>
+                            {price.price}
+                          </span>
+                        </div>
+                        <div className="price-box-left-bottom">
+                          <span>EVERY MONTH OR YEARLY</span>
+                        </div>
+                      </div>
+                      <div className="price-box-right">
+                        <div className="price-box-right-top">
+                          <div className="cnt1">
+                            <div className="cnt2 cnt-bottom">
+                              <div className="price-box-right-top-box">
+                                <h6>{price.title}</h6>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="price-box-right-middle">
+                          <div className="cnt1">
+                            <div className="cnt2 cnt-top">
+                              <div className="price-box-right-middle-box">
+                                <ul>
+                                  {price.service.map((priceListItem) => (
+                                    <li>{priceListItem}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="price-box-right-bottom">
+                          <div className="cnt1">
+                            <div className="cnt2 cnt-left">
+                              <a href={price.link} className="read-more-btn">
+                                Read More
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               {/* */}
             </div>
           </div>
