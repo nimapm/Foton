@@ -16,12 +16,15 @@ class CustomersCarousel extends Component {
   render() {
     // const { background } = this.props;
 
+    let classes = "customer-carousel-bg-img";
+    if (!this.state.background) classes += " carousel-bg-none";
     return (
       <React.Fragment>
         <div className="customers-carousel">
           <div className="customer-carousel-bg">
             <img
               src={require("../../assets/images/background/layer-blue-bottom.png")}
+              className={classes}
             />
           </div>
         </div>
