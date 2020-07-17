@@ -17,7 +17,7 @@ class CustomersCarousel extends Component {
     // const { background } = this.props;
 
     let classes = "customer-carousel-bg-img";
-    if (!this.state.background) classes += " carousel-bg-none";
+    if (!this.state.background) classes += "  carousel-bg-none";
     return (
       <React.Fragment>
         <div className="customers-carousel">
@@ -27,51 +27,56 @@ class CustomersCarousel extends Component {
               className={classes}
             />
           </div>
+          <div className="customers-carousel-content">
+            <div className="cnt1">
+              <div className="cnt2 cnt-center">
+                <div className="customers-carousel-box">
+                  <OwlCarousel
+                    className="owl-theme"
+                    loop
+                    items="4"
+                    stagePadding={10}
+                    autoplay
+                    dots={false}
+                  >
+                    <div class="item">
+                      <img src={img1} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img2} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img3} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img4} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img1} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img2} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img3} />
+                    </div>
+
+                    <div class="item">
+                      <img src={img4} />
+                    </div>
+                  </OwlCarousel>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </React.Fragment>
-
-      // <OwlCarousel
-      //   className="owl-theme"
-      //   loop
-      //   nav
-      //   items="5"
-      //   autoplay
-      //   nav
-      //   dots
-      //   margin={10}
-      // >
-      //   <div class="item">
-      //     <img src={img1} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img2} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img3} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img4} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img1} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img2} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img3} />
-      //   </div>
-
-      //   <div class="item">
-      //     <img src={img4} />
-      //   </div>
-      // </OwlCarousel>
     );
   }
 }

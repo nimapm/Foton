@@ -13,6 +13,10 @@
     text-align: left;
 }
 
+.cnt-center {
+    text-align: center;
+}
+
 .cnt-bottom {
     vertical-align: bottom;
 }
@@ -206,6 +210,44 @@
     .carousel-bg-none {
         display: none;
     }
+}
+
+
+.customers-carousel-content {
+
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    overflow-x: hidden;
+
+
+
+}
+
+
+.customers-carousel-box {
+    width: 80vw;
+    background-color: darkred;
+    display: inline-block;
+    margin-top: 10%;
+
+    .owl-theme {
+        width: 100%;
+
+        .item {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+.owl-stage-outer {
+    margin-left: 5%;
 }
 
 /* customers carousel   end */
