@@ -8,6 +8,7 @@ import MainServices from "./main/main-services";
 import Unique from "./main/unique";
 import ProtectedData from "./main/protect-data";
 import Prices from "./common/prices";
+import CustomersCarousel from "./common/customers-carousel";
 
 class Main extends Component {
   state = {};
@@ -21,6 +22,7 @@ class Main extends Component {
         <Unique />
         <ProtectedData />
         <Prices />
+        <CustomersCarousel />
       </React.Fragment>
     );
   }
