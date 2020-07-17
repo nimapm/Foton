@@ -2,7 +2,8 @@
 @import "./mixins";
 
 
-/* general */
+/* general start */
+
 .read-more-btn {
 
     @include readMore;
@@ -19,6 +20,9 @@
 .cnt-top {
     vertical-align: top;
 }
+
+/* general end  */
+
 
 /* prices start */
 
@@ -174,12 +178,40 @@
 }
 
 
+/* prices end */
+
+/* customers carousel  start */
+
+.customers-carousel {
+    @include section(60vh);
+
+}
+
+.customer-carousel-bg {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+
+    img {
+        left: -20%;
+        bottom: 0;
+        position: absolute;
+        width: 140%;
+        height: 90%;
+        z-index: 7;
+    }
+
+}
+
+/* customers carousel   end */
 
 /* Responsive */
 @media screen and (max-width: 700px) {
 
 
-
+    /* prices start */
 
     .price-box-parent {
 
@@ -218,7 +250,7 @@
         }
     }
 
-
+    /* prices start */
 
 
 

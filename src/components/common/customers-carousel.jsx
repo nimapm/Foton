@@ -10,52 +10,65 @@ import img3 from "../../assets/images/logo/mobile.png";
 import img4 from "../../assets/images/logo/mobile.png";
 
 class CustomersCarousel extends Component {
-  state = {};
+  state = {
+    background: this.props.background,
+  };
   render() {
+    // const { background } = this.props;
+
     return (
-      <OwlCarousel
-        className="owl-theme"
-        loop
-        margin={10}
-        nav
-        items="3"
-        autoplay
-        nav
-        dots
-        margin={10}
-      >
-        <div class="item">
-          <img src={img1} />
+      <React.Fragment>
+        <div className="customers-carousel">
+          <div className="customer-carousel-bg">
+            <img
+              src={require("../../assets/images/background/layer-blue-bottom.png")}
+            />
+          </div>
         </div>
+      </React.Fragment>
 
-        <div class="item">
-          <img src={img2} />
-        </div>
+      // <OwlCarousel
+      //   className="owl-theme"
+      //   loop
+      //   nav
+      //   items="5"
+      //   autoplay
+      //   nav
+      //   dots
+      //   margin={10}
+      // >
+      //   <div class="item">
+      //     <img src={img1} />
+      //   </div>
 
-        <div class="item">
-          <img src={img3} />
-        </div>
+      //   <div class="item">
+      //     <img src={img2} />
+      //   </div>
 
-        <div class="item">
-          <img src={img4} />
-        </div>
+      //   <div class="item">
+      //     <img src={img3} />
+      //   </div>
 
-        <div class="item">
-          <img src={img1} />
-        </div>
+      //   <div class="item">
+      //     <img src={img4} />
+      //   </div>
 
-        <div class="item">
-          <img src={img2} />
-        </div>
+      //   <div class="item">
+      //     <img src={img1} />
+      //   </div>
 
-        <div class="item">
-          <img src={img3} />
-        </div>
+      //   <div class="item">
+      //     <img src={img2} />
+      //   </div>
 
-        <div class="item">
-          <img src={img4} />
-        </div>
-      </OwlCarousel>
+      //   <div class="item">
+      //     <img src={img3} />
+      //   </div>
+
+      //   <div class="item">
+      //     <img src={img4} />
+      //   </div>
+      // </OwlCarousel>
     );
   }
 }

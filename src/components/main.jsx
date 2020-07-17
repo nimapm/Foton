@@ -22,7 +22,7 @@ class Main extends Component {
         <Unique />
         <ProtectedData />
         <Prices />
-        <CustomersCarousel />
+        <CustomersCarousel background={true} />
       </React.Fragment>
     );
   }
