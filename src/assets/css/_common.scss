@@ -191,14 +191,14 @@
 
 }
 
-.customer-carousel-bg {
+.customers-carousel-bg {
     width: 100%;
     height: 100%;
     text-align: center;
     position: relative;
     overflow-x: hidden;
 
-    .customer-carousel-bg-img {
+    .customers-carousel-bg-img {
         left: -20%;
         bottom: 0;
         position: absolute;
@@ -229,7 +229,7 @@
 
 
 .customers-carousel-box {
-    width: 80vw;
+    width: 1200px;
     display: inline-block;
     margin-top: 10%;
 
@@ -252,38 +252,97 @@
 
 
     /* prices start */
+    .prices {
+        height: max-content !important;
 
-    .price-box-parent {
+        .price-box-parent {
 
-        width: 100%;
-        height: 100%;
-
-
-        .price-box-parent-child {
+            width: 100%;
             height: max-content;
-            display: inline-block !important;
-            text-align: center;
-            margin-top: 20%;
 
-            .cnt1 {
-                .cnt2 {
-                    .price-box {
-                        width: 90%;
-                        height: 70vh;
-                        display: inline-block;
-                        padding-top: 15%;
-                        padding-bottom: 15%;
-                        margin-bottom: 10%;
 
-                        .price-box-left {
+            .price-box-parent-child {
+                height: max-content;
+                display: inline-block !important;
+                text-align: center;
+                margin-top: 20%;
 
-                            .price-box-left-bottom {
-                                span {
-                                    margin-left: 5%;
+                .cnt1 {
+                    .cnt2 {
+                        .price-box {
+                            width: 90%;
+                            height: max-content;
+                            display: inline-block;
+                            padding-top: 15%;
+                            padding-bottom: 15%;
+                            margin-bottom: 10%;
+                            text-align: center;
+
+                            .price-box-left {
+                                width: 100%;
+
+                                .price-box-left-top {
+                                    text-align: center;
+                                }
+
+                                .price-box-left-bottom {
+                                    text-align: center;
+
+                                    span {
+                                        margin-left: 5%;
+                                    }
                                 }
                             }
-                        }
 
+                            .price-box-right {
+                                width: 100%;
+
+                                .price-box-right-top {
+                                    .cnt1 {
+                                        .cnt2 {
+                                            text-align: center;
+
+                                            .price-box-right-top-box {
+                                                text-align: center;
+                                                width: 50%;
+                                                display: inline-block;
+
+                                                h6 {
+                                                    margin-left: 0;
+                                                    margin-right: 0;
+                                                    margin-top: 10%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .price-box-right-middle {
+                                    .cnt1 {
+                                        .cnt2 {
+                                            .price-box-right-middle-box {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .price-box-right-bottom {
+                                margin-top: 10%;
+
+                                .cnt1 {
+                                    .cnt2 {
+                                        text-align: center !important;
+
+                                        .read-more-btn {
+                                            margin-left: 2%;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
                     }
                 }
             }
@@ -292,7 +351,17 @@
 
     /* prices start */
 
+    /* customers carousel start */
 
+    .customers-carousel-box {
+        width: 70vw;
+    }
+
+    .customers-carousel-bg {
+        display: none;
+    }
+
+    /* customers carousel end */
 
 
 }

@@ -26,12 +26,12 @@ class CustomersCarousel extends Component {
   render() {
     const { background, customersLogo } = this.state;
 
-    let classes = "customer-carousel-bg-img";
+    let classes = "customers-carousel-bg-img";
     if (!background) classes += "  carousel-bg-none";
     return (
       <React.Fragment>
         <div className="customers-carousel">
-          <div className="customer-carousel-bg">
+          <div className="customers-carousel-bg">
             <img
               src={require("../../assets/images/background/layer-blue-bottom.png")}
               className={classes}
@@ -48,6 +48,7 @@ class CustomersCarousel extends Component {
                     stagePadding={10}
                     autoplay
                     dots={false}
+                    autoWidth={true}
                   >
                     {customersLogo.map((customer, index) => (
                       <div key={("customer-carousel", index)} class="item">
