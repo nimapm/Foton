@@ -230,7 +230,6 @@
 
 .customers-carousel-box {
     width: 80vw;
-    background-color: darkred;
     display: inline-block;
     margin-top: 10%;
 
@@ -239,16 +238,12 @@
 
         .item {
             img {
-                width: 150px;
-                height: 150px;
+                width: 100%;
             }
         }
     }
 }
 
-.owl-stage-outer {
-    margin-left: 5%;
-}
 
 /* customers carousel   end */
 

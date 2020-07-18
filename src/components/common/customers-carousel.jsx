@@ -12,12 +12,22 @@ import img4 from "../../assets/images/logo/mobile.png";
 class CustomersCarousel extends Component {
   state = {
     background: this.props.background,
+    customersLogo: [
+      "w.png",
+      "aliqua.png",
+      "dynamic.png",
+      "i.png",
+      "labore.png",
+      "oceandor.png",
+      "va.png",
+      "vegan.png",
+    ],
   };
   render() {
-    // const { background } = this.props;
+    const { background, customersLogo } = this.state;
 
     let classes = "customer-carousel-bg-img";
-    if (!this.state.background) classes += "  carousel-bg-none";
+    if (!background) classes += "  carousel-bg-none";
     return (
       <React.Fragment>
         <div className="customers-carousel">
@@ -34,42 +44,20 @@ class CustomersCarousel extends Component {
                   <OwlCarousel
                     className="owl-theme"
                     loop
-                    items="4"
+                    items="5"
                     stagePadding={10}
                     autoplay
                     dots={false}
                   >
-                    <div class="item">
-                      <img src={img1} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img2} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img3} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img4} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img1} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img2} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img3} />
-                    </div>
-
-                    <div class="item">
-                      <img src={img4} />
-                    </div>
+                    {customersLogo.map((customer, index) => (
+                      <div key={("customer-carousel", index)} class="item">
+                        <img
+                          src={require("../../assets/images/logo/customers/" +
+                            customer +
+                            "")}
+                        />
+                      </div>
+                    ))}
                   </OwlCarousel>
                 </div>
               </div>
