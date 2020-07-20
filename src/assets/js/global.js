@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 // hide menu on scroll down
 export function headerHider() {
   window.onscroll = function () {
@@ -15,3 +17,16 @@ export function headerHider() {
     }
   }
 }
+
+// search box controller
+$(document).ready(function () {
+  // open search
+  $(".search-btn").click(function () {
+    $(".main-search-box").fadeIn();
+  });
+
+  // close search
+  $(".search-box-close-icon").click(function () {
+    $(".main-search-box").fadeOut();
+  });
+});
