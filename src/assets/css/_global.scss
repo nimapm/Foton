@@ -14,7 +14,12 @@
     @include cnt2
 }
 
+
+
 /* header start */
+header {
+    position: relative;
+}
 
 .header-normal {
     width: 100%;
@@ -151,5 +156,81 @@ rgba(12, 9, 4, 0.149);
     }
 }
 
+
+.main-search-box {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+
+    box-shadow: 0 10px 55px 5px rgba(137, 173, 255, .35);
+
+    background-color: rgb(250, 250, 250);
+}
+
+
+.main-search-box-content {
+    height: 100%;
+    display: inline-block;
+}
+
+
+$header-search-children-sizes: 10%,
+80%,
+10%;
+
+$header-search-children-colors:rgba(139, 0, 0, 0.4),
+rgba(0, 0, 139, 0.4),
+rgba(12, 9, 4, 0.4);
+
+//  
+// this code will change left position with $container-bg-left
+
+@for $item from 1 through length($header-search-children-sizes) {
+
+
+    .main-search-box-content:nth-child(#{$item}) {
+        width: nth($header-search-children-sizes, $item);
+        // background-color: nth($header-search-children-colors, $item);
+    }
+}
+
+.search-box-search-icon {
+    margin-right: 10%;
+    vertical-align: middle;
+}
+
+.search-box-input {
+    margin-left: 2%;
+    width: 95%;
+    height: 60%;
+    font-family: $main-font;
+    color: $main-blue;
+    font-size: 1em;
+
+    // font-family: Poppins,sans-serif;
+    // color: #58468c;
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    outline-offset: 0;
+    border-radius: 0;
+    letter-spacing: .085em;
+}
+
+.search-box-input::placeholder {
+    color: $main-blue;
+}
+
+.search-box-close-icon {
+    vertical-align: middle;
+}
+
+.st0 {
+    fill: #7AA0FF;
+}
 
 /* header end */
