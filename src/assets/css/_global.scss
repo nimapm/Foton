@@ -1,0 +1,155 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cnt1 {
+    @include cnt1
+}
+
+.cnt2 {
+    @include cnt2
+}
+
+/* header start */
+
+.header-normal {
+    width: 100%;
+    height: 70px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+#header {
+    background-color: #333;
+    position: fixed;
+    top: -70px;
+    width: 100%;
+    height: 70px;
+    display: block;
+    transition: top 0.3s;
+    z-index: 11;
+}
+
+.header-content {
+    height: 100%;
+    display: inline-block;
+}
+
+
+
+$header-children-sizes: 15%,
+70%,
+15%;
+
+$header-children-colors:rgba(139, 0, 0, 0.2),
+rgba(0, 0, 139, 0.104),
+rgba(12, 9, 4, 0.149);
+
+//  
+// this code will change left position with $container-bg-left
+
+@for $item from 1 through length($header-children-sizes) {
+
+
+    .header-content:nth-child(#{$item}) {
+        width: nth($header-children-sizes, $item);
+        // background-color: nth($header-children-colors, $item);  
+    }
+}
+
+
+.header-main-logo {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.main-logo {
+    width: 50%;
+}
+
+
+.header-main-navigation {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.main-nav {
+    width: 100%;
+    display: inline-block;
+
+    a {
+        li {
+            display: inline-block;
+            margin-left: 2.7%;
+            margin-right: 2.7%;
+            font-weight: 500;
+            transition: 0.5s all;
+            color: $main-blue;
+        }
+
+        li:hover {
+            color: $main-orange;
+        }
+    }
+}
+
+.header-main-icons {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .cnt1 {
+        .cnt2 {
+            svg {
+                vertical-align: middle;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+
+            // search icon 
+            .search-1 {
+                fill: #58468c;
+                fill-rule: evenodd;
+            }
+
+            // hamburger icon 
+            .open-box {
+                fill: #58468c;
+            }
+
+            .mkdf-light-header:not(.mkdf-sticky-header-appear) .open-box {
+                fill: #5580FF !important;
+            }
+
+            .open-lines {
+                fill: #FFFFFF !important;
+            }
+
+            .mkdf-light-header .open-lines {
+                fill: #fff !important;
+            }
+
+
+
+            div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener:hover .open-box {
+                fill: #FF8A73 !important;
+            }
+
+
+        }
+    }
+}
+
+
+/* header end */

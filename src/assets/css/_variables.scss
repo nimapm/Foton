@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 
 // Colors
 $main-white: #fff;
@@ -37,3 +37,21 @@ $main-font-description : $main-font-2;
 
 // text colors
 $main-text-1: $main-white;
+
+// global styles 
+
+.cnt-left {
+    text-align: left;
+}
+
+.cnt-center {
+    text-align: center;
+}
+
+.cnt-bottom {
+    vertical-align: bottom;
+}
+
+.cnt-top {
+    vertical-align: top;
+}

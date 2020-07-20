@@ -9,12 +9,14 @@ import Unique from "./main/unique";
 import ProtectedData from "./main/protect-data";
 import Prices from "./common/prices";
 import CustomersCarousel from "./common/customers-carousel";
+import Header from "./global/header";
 
 class Main extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
+        <Header />
         <Intro />
         <Secure />
         <DigitalAgency />
