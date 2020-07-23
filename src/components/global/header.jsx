@@ -286,6 +286,11 @@ class Header extends Component {
             </div>
           </div>
         </div>
+        <div id="mobile-header">
+          <div className="cnt1">
+            <div className="cnt2"></div>
+          </div>
+        </div>
       </header>
     );
   }

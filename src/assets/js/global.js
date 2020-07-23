@@ -1,11 +1,15 @@
 import $ from "jquery";
 
 // hide menu on scroll down
-export function headerHider() {
+function headerHider() {
+  var prevScrollpos = window.pageYOffset;
+
   window.onscroll = function () {
     scrollFunction();
+    mobilescrolled();
   };
 
+  // laptop scroll
   function scrollFunction() {
     if (
       document.body.scrollTop > 20 ||
@@ -15,6 +19,17 @@ export function headerHider() {
     } else {
       document.getElementById("header").style.top = "-70px";
     }
+  }
+
+  // mobile scroll
+  function mobilescrolled() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("mobile-header").style.top = "0";
+    } else {
+      document.getElementById("mobile-header").style.top = "-70px";
+    }
+    prevScrollpos = currentScrollPos;
   }
 }
 
@@ -30,3 +45,5 @@ $(document).ready(function () {
     $(".main-search-box").fadeOut();
   });
 });
+
+export { headerHider };
