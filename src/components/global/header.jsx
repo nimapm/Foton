@@ -288,7 +288,38 @@ class Header extends Component {
         </div>
         <div id="mobile-header">
           <div className="cnt1">
-            <div className="cnt2"></div>
+            <div className="cnt2 cnt-left">
+              <div className="mobile-menu-hamburger">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                >
+                  <g>
+                    <path
+                      class="open-box"
+                      d="M35,40H5c-2.8,0-5-2.2-5-5V5c0-2.8,2.2-5,5-5h30c2.8,0,5,2.2,5,5v30C40,37.8,37.8,40,35,40z"
+                    ></path>
+                  </g>
+                  <path
+                    class="open-lines"
+                    d="M28,21H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,20.6,28.6,21,28,21z"
+                  ></path>
+                  <path
+                    class="open-lines"
+                    d="M28,16H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,15.6,28.6,16,28,16z"
+                  ></path>
+                  <path
+                    class="open-lines"
+                    d="M28,26H12c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C29,25.6,28.6,26,28,26z"
+                  ></path>
+                </svg>
+              </div>
+              <div className="mobile-menu-logo">
+                <img src={logo.colored} />
+              </div>
+            </div>
           </div>
         </div>
       </header>

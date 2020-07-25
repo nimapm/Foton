@@ -2,276 +2,346 @@
 @import "./mixins";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .cnt1 {
-    @include cnt1
+  @include cnt1;
 }
 
 .cnt2 {
-    @include cnt2
+  @include cnt2;
 }
-
-
 
 /* header start */
 header {
-    position: relative;
+  position: relative;
 }
 
 .header-normal {
-    width: 100%;
-    height: 70px;
-    text-align: left;
-    position: absolute;
-    top: 0;
-    z-index: 10;
+  width: 100%;
+  height: 70px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
 
 #header {
-    background-color: $main-white;
-    position: fixed;
-    top: -70px;
-    width: 100%;
-    height: 70px;
-    display: block;
-    transition: top 0.3s;
-    z-index: 11;
-    border-bottom: 1px solid transparentize($color: $main-grey, $amount: 0.9);
+  background-color: $main-white;
+  position: fixed;
+  top: -70px;
+  width: 100%;
+  height: 70px;
+  display: block;
+  transition: top 0.3s;
+  z-index: 11;
+  border-bottom: 1px solid transparentize($color: $main-grey, $amount: 0.9);
 }
 
 .header-fixed-parent {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .header-content {
-    height: 100%;
-    display: inline-block;
+  height: 100%;
+  display: inline-block;
 }
 
+$header-children-sizes: 15%, 70%, 15%;
 
+$header-children-colors: rgba(139, 0, 0, 0.2), rgba(0, 0, 139, 0.104),
+  rgba(12, 9, 4, 0.149);
 
-$header-children-sizes: 15%,
-70%,
-15%;
-
-$header-children-colors:rgba(139, 0, 0, 0.2),
-rgba(0, 0, 139, 0.104),
-rgba(12, 9, 4, 0.149);
-
-//  
+//
 // this code will change left position with $container-bg-left
 
 @for $item from 1 through length($header-children-sizes) {
-
-
-    .header-content:nth-child(#{$item}) {
-        width: nth($header-children-sizes, $item);
-        // background-color: nth($header-children-colors, $item);  
-    }
+  .header-content:nth-child(#{$item}) {
+    width: nth($header-children-sizes, $item);
+    // background-color: nth($header-children-colors, $item);
+  }
 }
 
-
 .header-main-logo {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 .main-logo {
-    width: 50%;
+  width: 50%;
 }
 
-
 .header-main-navigation {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 .main-nav {
-    width: 100%;
-    display: inline-block;
+  width: 100%;
+  display: inline-block;
 
-    a {
-        li {
-            display: inline-block;
-            margin-left: 2.7%;
-            margin-right: 2.7%;
-            font-weight: 500;
-            transition: 0.5s all;
-            color: $main-blue;
-        }
-
-        li:hover {
-            color: $main-orange;
-        }
+  a {
+    li {
+      display: inline-block;
+      margin-left: 2.7%;
+      margin-right: 2.7%;
+      font-weight: 500;
+      transition: 0.5s all;
+      color: $main-blue;
     }
+
+    li:hover {
+      color: $main-orange;
+    }
+  }
 }
 
 .header-main-icons {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 
-    .cnt1 {
-        .cnt2 {
-            svg {
-                vertical-align: middle;
-                margin-left: 5%;
-                margin-right: 5%;
-                cursor: pointer;
-            }
-
-
-            // search icon 
-            .search-1 {
-                fill: #58468c;
-                fill-rule: evenodd;
-            }
-
-            // hamburger icon 
-            .open-box {
-                fill: #58468c;
-            }
-
-            .mkdf-light-header:not(.mkdf-sticky-header-appear) .open-box {
-                fill: #5580FF !important;
-            }
-
-            .open-lines {
-                fill: #FFFFFF !important;
-            }
-
-            .mkdf-light-header .open-lines {
-                fill: #fff !important;
-            }
-
-
-
-            div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener:hover .open-box {
-                fill: #FF8A73 !important;
-            }
-
-
-        }
+  .cnt1 {
+    .cnt2 {
+      svg {
+        vertical-align: middle;
+        margin-left: 5%;
+        margin-right: 5%;
+        cursor: pointer;
+      }
     }
+  }
 }
 
-// search box 
+// search icon
+.search-1 {
+  fill: #58468c;
+  fill-rule: evenodd;
+}
+
+// hamburger icon
+.open-box {
+  fill: #58468c;
+}
+
+.mkdf-light-header:not(.mkdf-sticky-header-appear) .open-box {
+  fill: #5580ff !important;
+}
+
+.open-lines {
+  fill: #ffffff !important;
+}
+
+.mkdf-light-header .open-lines {
+  fill: #fff !important;
+}
+
+div:not(.mkdf-sticky-header):not(.fixed)
+  .mkdf-side-menu-button-opener:hover
+  .open-box {
+  fill: #ff8a73 !important;
+}
+
+// search box
 .main-search-box {
-    display: none;
+  display: none;
 
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  position: absolute;
+  top: 0;
 
-    box-shadow: 0 10px 55px 5px rgba(137, 173, 255, .35);
+  box-shadow: 0 10px 55px 5px rgba(137, 173, 255, 0.35);
 
-    background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
 }
-
 
 .main-search-box-content {
-    height: 100%;
-    display: inline-block;
+  height: 100%;
+  display: inline-block;
 }
 
+$header-search-children-sizes: 10%, 80%, 10%;
 
-$header-search-children-sizes: 10%,
-80%,
-10%;
+$header-search-children-colors: rgba(139, 0, 0, 0.4), rgba(0, 0, 139, 0.4),
+  rgba(12, 9, 4, 0.4);
 
-$header-search-children-colors:rgba(139, 0, 0, 0.4),
-rgba(0, 0, 139, 0.4),
-rgba(12, 9, 4, 0.4);
-
-//  
+//
 // this code will change left position with $container-bg-left
 
 @for $item from 1 through length($header-search-children-sizes) {
-
-
-    .main-search-box-content:nth-child(#{$item}) {
-        width: nth($header-search-children-sizes, $item);
-        // background-color: nth($header-search-children-colors, $item);
-    }
+  .main-search-box-content:nth-child(#{$item}) {
+    width: nth($header-search-children-sizes, $item);
+    // background-color: nth($header-search-children-colors, $item);
+  }
 }
 
 .search-box-search-icon {
-    margin-right: 10%;
-    vertical-align: middle;
+  margin-right: 10%;
+  vertical-align: middle;
 }
 
 .search-box-input {
-    margin-left: 2%;
-    width: 95%;
-    height: 60%;
-    font-family: $main-font;
-    color: $main-blue;
-    font-size: 1em;
+  margin-left: 2%;
+  width: 95%;
+  height: 60%;
+  font-family: $main-font;
+  color: $main-blue;
+  font-size: 1em;
 
-    // font-family: Poppins,sans-serif;
-    // color: #58468c;
-    font-weight: 500;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none;
-    outline: 0;
-    outline-offset: 0;
-    border-radius: 0;
-    letter-spacing: .085em;
+  // font-family: Poppins,sans-serif;
+  // color: #58468c;
+  font-weight: 500;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+  outline-offset: 0;
+  border-radius: 0;
+  letter-spacing: 0.085em;
 }
 
 .search-box-input::placeholder {
-    color: $main-blue;
+  color: $main-blue;
 }
 
 .search-box-close-icon {
-    vertical-align: middle;
-    cursor: pointer;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .st0 {
-    fill: #7AA0FF;
+  fill: #7aa0ff;
 }
-
-
-
 
 #mobile-header {
-    display: none;
+  display: none;
 
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    text-align: center;
-    transition: top 0.3s;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  text-align: center;
+  transition: top 0.3s;
 
-    background-color: darkblue;
+  background-color: $main-white;
+
+  box-shadow: 0 0 15px transparentize($color: $main-blue, $amount: 0.2);
 }
 
+.mobile-menu-hamburger {
+  width: 30%;
+  text-align: left;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.mobile-menu-logo {
+  width: 65%;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+
+  img {
+    width: 50%;
+  }
+}
+
+/* header end */
+
+/* footer start  */
+.footer {
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  background-color: $main-darkBlue;
+
+  .footer-content {
+    vertical-align: top;
+    width: 20%;
+    min-height: 60%;
+    margin: 1%;
+
+    display: inline-block;
+  }
+}
+
+.footer-cnt {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8%;
+
+  img {
+    width: 45%;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $main-white;
+  }
+
+  h6 {
+    color: $main-white;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  i.footer-address {
+    margin-right: 5%;
+  }
+}
+
+.social-icons {
+  width: 50px;
+  height: 50px;
+  background-color: $main-white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5%;
+
+  i {
+    font-size: 1.5em;
+    margin-top: 10%;
+    color: $main-darkBlue;
+  }
+}
+
+.footer-address {
+  display: inline-block;
+}
+
+.footer-contact-ways {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 4%;
+
+  i {
+    color: white;
+  }
+}
+
+/* footer end  */
+
 @media screen and (max-width: 700px) {
+  /* header start  */
+  .header-normal,
+  #header {
+    display: none;
+  }
 
-    .header-normal,
-    #header {
-        display: none;
-    }
-
-    #mobile-header {
-        display: block;
-    }
+  #mobile-header {
+    display: block;
+  }
 }
 
 /* header end */

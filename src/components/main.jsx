@@ -10,6 +10,7 @@ import ProtectedData from "./main/protect-data";
 import Prices from "./common/prices";
 import CustomersCarousel from "./common/customers-carousel";
 import Header from "./global/header";
+import Footer from "./global/footer";
 
 class Main extends Component {
   state = {};
@@ -25,6 +26,7 @@ class Main extends Component {
         <ProtectedData />
         <Prices />
         <CustomersCarousel background={true} />
+        <Footer />
       </React.Fragment>
     );
   }
