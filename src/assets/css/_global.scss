@@ -424,6 +424,34 @@ rgba(12, 9, 4, 0.4);
   #mobile-header {
     display: block;
   }
-}
 
-/* header end */
+  /* header end */
+
+  /* footer start */
+  .footer {
+    height: max-content;
+  }
+
+  .footer-content {
+
+    display: inline !important;
+  }
+
+  .footer-cnt {
+    width: 80%;
+    text-align: left;
+    display: inline-block;
+
+    &:nth-child(1) {
+      margin-top: 10%;
+    }
+  }
+
+  .footer-callout {
+    p {
+      font-size: 1em;
+    }
+  }
+
+  /* footer end  */
+}
