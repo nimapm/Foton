@@ -17,9 +17,22 @@ class Footer extends Component {
       { icon: "fas fa-envelope ", text: "youremail@yourdomain.com" },
       { icon: "fas fa-phone ", text: "+88 (0) 101 0000 000" },
     ],
+    callOut: {
+      message:
+        "Sophisticated, luxurious, and classic all at once, elegant fonts are more than capable of leaving a lasting impress…",
+      icon: "fab fa-twitter",
+      text: "Qode Interactive",
+    },
+
+    support: {
+      text:
+        "Quisque actraqum nunc no dolor sit ametaugue dolor. Lorem ipsum dolor sit amet, consyect etur.",
+      leftButton: [require("../../assets/images/logo/apple-store.png"), "#"],
+      rightButton: [require("../../assets/images/logo/google-play.png"), "#"],
+    },
   };
   render() {
-    const { logo, socialMedia, contacts } = this.state;
+    const { logo, socialMedia, contacts, callOut, support } = this.state;
     return (
       <div className="footer">
         <div className="cnt1">
@@ -56,8 +69,6 @@ class Footer extends Component {
               </div>
 
               <div className="footer-cnt">
-                {/* <i className="fas fa-map-marker-alt footer-address"></i>
-                <p className="footer-address">113 Fulton Street, Suite 721</p> */}
                 {contacts.map((contact, index) => (
                   <div className="footer-contact-ways">
                     <i className={contact.icon + "footer-address"}></i>
@@ -67,8 +78,43 @@ class Footer extends Component {
                 ))}
               </div>
             </div>
-            <div className="footer-content"></div>
-            <div className="footer-content"></div>
+            <div className="footer-content">
+              <div className="footer-cnt">
+                <div className="footer-callout">
+                  <p>{callOut.message}</p>
+                </div>
+
+                <div className="footer-cnt">
+                  <div className="footer-callout-icon">
+                    <div className="cnt1">
+                      <div className="cnt2">
+                        <i class={callOut.icon}></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="footer-callout-text">
+                    <p>{callOut.text}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="footer-content">
+              <div className="footer-cnt">
+                <h6>Support & Downloads</h6>
+
+                <p className="footer-support">{support.text}</p>
+
+                <div className="footer-support-centered">
+                  <a href={support.leftButton[1]}>
+                    <img src={support.leftButton[0]} />
+                  </a>
+
+                  <a href={support.rightButton[1]}>
+                    <img src={support.rightButton[0]} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

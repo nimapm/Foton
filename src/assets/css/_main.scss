@@ -476,7 +476,7 @@ $container-element-width:25%,
   border: 1px solid #dde7ff;
   backface-visibility: hidden;
 
-  transition: 0.2s all;
+  transition: 0.5s all;
 
 
   padding-top: 2%;
@@ -501,8 +501,8 @@ $container-element-width:25%,
 }
 
 .main-services-cnt:hover {
-  margin-top: -0.5%;
-  border: transparent;
+  margin-top: -0.5px;
+  border: 1px solid #dde7ff00;
   box-shadow: 0 10px 55px 5px rgba(137, 173, 255, .35);
 }
 
