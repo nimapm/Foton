@@ -413,6 +413,150 @@ rgba(12, 9, 4, 0.4);
 
 /* footer end  */
 
+/* side bar start */
+.side-bar {
+  width: 500px;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 12;
+  right: -500px;
+  text-align: center;
+
+  background-color: $main-white;
+  border-left: 1px solid transparentize($color: $main-grey, $amount:0.8);
+  box-shadow: 0 10px 55px 5px rgba(28, 96, 255, 0.15);
+
+
+}
+
+.side-bar-exit {
+
+  position: absolute;
+  right: 5%;
+  top: 5%;
+
+  svg {
+    cursor: pointer;
+
+    g {
+      path {
+        transition: 0.5s all;
+
+      }
+    }
+  }
+
+  svg:hover {
+    g {
+
+
+      path:hover {
+
+        fill: $main-orange;
+
+      }
+    }
+
+  }
+
+
+}
+
+.side-bar-content-parent {
+  display: inline-block;
+  width: 70%;
+  height: max-content;
+  margin-top: 4vw;
+
+}
+
+.side-bar-content {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 10%;
+
+}
+
+.side-bar-cnt {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5%;
+
+  a {
+    .social-icons {
+      box-shadow: 0 5px 10px #6767ffb3;
+    }
+  }
+
+  img {
+    margin-right: 5%;
+  }
+
+
+  h6 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: $main-blue;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: normal;
+    color: $main-grey;
+    display: inline-block;
+    margin-right: 5%;
+  }
+
+
+}
+
+.side-bar-contact {
+  margin-right: 5%;
+}
+
+.sidebar-contact-ways {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 4%;
+
+  img {
+    width: 45%;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: $main-white;
+  }
+
+  h6 {
+    color: $main-white;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+
+  i.sidebar-address {
+    margin-right: 5%;
+    color: $main-darkBlue;
+  }
+
+  .sidebar-address {
+    color: $main-blue;
+  }
+
+
+}
+
+.side-bar-follow-us {
+  font-size: 1.2em;
+}
+
+.side-bar-mid-p {
+  margin-bottom: 5%;
+  color: $main-blue !important;
+}
+
+/* side bar end */
+
 @media screen and (max-width: 700px) {
 
   /* header start  */
@@ -428,6 +572,7 @@ rgba(12, 9, 4, 0.4);
   /* header end */
 
   /* footer start */
+
   .footer {
     height: max-content;
   }
@@ -454,4 +599,11 @@ rgba(12, 9, 4, 0.4);
   }
 
   /* footer end  */
+
+  /* side bar start */
+  .side-bar {
+    width: 100%;
+  }
+
+  /* side bar end */
 }

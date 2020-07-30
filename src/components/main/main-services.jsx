@@ -70,7 +70,10 @@ class MainServices extends Component {
                 <div className="cnt2">
                   <div className="main-services-bottom-box-child">
                     {services.map((service, index) => (
-                      <div className="main-services-cnt">
+                      <div
+                        key={("main-services-cnt-div ", index)}
+                        className="main-services-cnt"
+                      >
                         <div className="main-services-cnt-left">
                           <div className="cnt1">
                             <div className="cnt2">

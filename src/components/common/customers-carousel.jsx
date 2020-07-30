@@ -51,7 +51,7 @@ class CustomersCarousel extends Component {
                     autoWidth={true}
                   >
                     {customersLogo.map((customer, index) => (
-                      <div key={("customer-carousel", index)} class="item">
+                      <div key={("customer-carousel", index)} className="item">
                         <img
                           src={require("../../assets/images/logo/customers/" +
                             customer +

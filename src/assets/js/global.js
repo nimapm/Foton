@@ -46,4 +46,21 @@ $(document).ready(function () {
   });
 });
 
+// side bar controller
+$(document).ready(function () {
+  // open search
+  $(".side-bar-svg").click(function () {
+    $(".side-bar").css("right", "-500px").animate({
+      right: "0",
+    });
+  });
+
+  // close search
+  $(".side-bar-close").click(function () {
+    $(".side-bar").css("right", "0px").animate({
+      right: "-500px",
+    });
+  });
+});
+
 export { headerHider };

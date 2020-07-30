@@ -56,8 +56,14 @@ class Unique extends Component {
                         <p>{description}</p>
                       </div>
                       <div className="unique-right-cnt-bottom">
-                        {statistics.map((s) => (
-                          <div className="unique-right-cnt-bottom-statistics">
+                        {statistics.map((s, index) => (
+                          <div
+                            key={
+                              ("unique-right-cnt-bottom-statistics-parent",
+                              index)
+                            }
+                            className="unique-right-cnt-bottom-statistics"
+                          >
                             <div className="cnt1">
                               <div className="cnt2">
                                 <div className="unique-right-cnt-bottom-statistics-box">

@@ -83,8 +83,10 @@ class Prices extends Component {
                             <div className="cnt2 cnt-top">
                               <div className="price-box-right-middle-box">
                                 <ul>
-                                  {price.service.map((priceListItem) => (
-                                    <li>{priceListItem}</li>
+                                  {price.service.map((priceListItem, index) => (
+                                    <li key={("li-miidle", index)}>
+                                      {priceListItem}
+                                    </li>
                                   ))}
                                 </ul>
                               </div>

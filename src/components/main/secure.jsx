@@ -16,7 +16,7 @@ class Secure extends Component {
 
     return (
       <React.Fragment>
-        <div class="main-secure">
+        <div className="main-secure">
           <div className="main-secure-bg">
             <div className="main-secure-bg-child">
               <div className="main-secure-bg-text">

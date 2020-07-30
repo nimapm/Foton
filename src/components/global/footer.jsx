@@ -50,11 +50,11 @@ class Footer extends Component {
               <div className="footer-cnt">
                 <div className="footer-cnt">
                   {socialMedia.map((social, index) => (
-                    <a href={social.link}>
+                    <a key={("footer-cnt", index)} href={social.link}>
                       <div className="social-icons">
                         <div className="cnt1">
                           <div className="cnt2">
-                            <i class={social.logo}></i>
+                            <i className={social.logo}></i>
                           </div>
                         </div>
                       </div>
@@ -70,7 +70,10 @@ class Footer extends Component {
 
               <div className="footer-cnt">
                 {contacts.map((contact, index) => (
-                  <div className="footer-contact-ways">
+                  <div
+                    key={("footer-contact-ways", index)}
+                    className="footer-contact-ways"
+                  >
                     <i className={contact.icon + "footer-address"}></i>
                     <p className="footer-address">{contact.text}</p>
                     <br />
@@ -88,7 +91,7 @@ class Footer extends Component {
                   <div className="footer-callout-icon">
                     <div className="cnt1">
                       <div className="cnt2">
-                        <i class={callOut.icon}></i>
+                        <i className={callOut.icon}></i>
                       </div>
                     </div>
                   </div>
