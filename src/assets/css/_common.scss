@@ -233,6 +233,85 @@
 /* customers carousel end */
 
 /* c-img-right start */
+.c-img-right {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.c-img-right-bg {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+
+    .c-img-right-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img-none {
+        display: none;
+    }
+}
+
+
+.c-img-right-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.c-img-right-content-left {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.c-img-right-content-right {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.c-img-right-content-left-cnt {
+    width: 70%;
+    margin-left: 10%;
+    height: max-content;
+    display: inline-block;
+    text-align: left;
+
+    h2 {
+        font-size: 3em;
+        color: $main-blue;
+        font-weight: normal;
+    }
+
+    p {
+        color: $main-grey;
+        font-size: 1.3vw;
+
+    }
+}
+
+
+.c-img-right-content-right-cnt {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+
+    img {
+        width: 120%;
+        position: absolute;
+        bottom: 0;
+        right: 2%;
+    }
+}
 
 /* c-img-right end*/
 

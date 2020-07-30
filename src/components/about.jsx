@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 
+import ContainerImageRight from "./common/containers/c-img-right";
+
 class About extends Component {
   state = {};
+
   render() {
     return (
       <div>
-        <h1>Helo</h1>
+        <ContainerImageRight background={true} />
       </div>
     );
   }
