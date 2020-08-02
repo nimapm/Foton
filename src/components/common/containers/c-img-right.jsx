@@ -15,7 +15,7 @@ class ContainerImageRight extends Component {
             src={require("../../../assets/images/background/container-bg.jpg")}
           />
         </div>
-        <div className="c-img-right-content">
+        <div className="c-img-right-content c-img-right-normal">
           <div className="c-img-right-content-left">
             <div className="cnt1">
               <div className="cnt2">
@@ -43,6 +43,39 @@ class ContainerImageRight extends Component {
                       />
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="c-img-right-content c-img-right-responsive">
+          <div className="c-img-right-content-right">
+            <div className="cnt1">
+              <div className="cnt2">
+                <div className="c-img-right-content-right-cnt">
+                  <div className="cnt1">
+                    <div className="cnt2 cnt-top">
+                      <img
+                        src={require("../../../assets/images/elements/about-us.png")}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="c-img-right-content-left">
+            <div className="cnt1">
+              <div className="cnt2">
+                <div className="c-img-right-content-left-cnt">
+                  <h2>
+                    Company <br /> Growth Strategy
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, con sectetu adipiscing elit. In
+                    sagittis egestas ante, sed viverra nunc.
+                  </p>
                 </div>
               </div>
             </div>

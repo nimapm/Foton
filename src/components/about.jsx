@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import ContainerImageRight from "./common/containers/c-img-right";
+import Services from "./common/services";
 
 class About extends Component {
   state = {};
@@ -9,6 +10,7 @@ class About extends Component {
     return (
       <div>
         <ContainerImageRight background={true} />
+        <Services />
       </div>
     );
   }

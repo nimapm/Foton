@@ -109,12 +109,10 @@
                                     }
                                 }
                             }
-
                         }
                     }
                 }
             }
-
         }
     }
 
@@ -245,11 +243,14 @@
     text-align: center;
     position: absolute;
     top: 0;
+    overflow: hidden;
 
     .c-img-right-bg-img {
-        width: 100%;
+        width: 150%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+
     }
 
     .img-none {
@@ -313,10 +314,96 @@
     }
 }
 
+.c-img-right-responsive {
+
+    display: none;
+
+}
+
 /* c-img-right end*/
 
+/* services start */
 
-/* Responsive */
+.services {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+
+}
+
+
+.services-child {
+
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+.services-content {
+    // width: calc(30% - 80px);
+    height: 80%;
+    display: inline-block;
+    margin: 1%;
+    vertical-align: top;
+    border-radius: 8px;
+    width: 20%;
+    transition: 0.3s all;
+
+    $services-content-cnt-height: 50%, 25%, 10%;
+
+    @for $item from 1 through length($services-content-cnt-height) {
+        .services-content-cnt:nth-child(#{$item}) {
+            height: nth($services-content-cnt-height, $item)
+        }
+    }
+
+
+
+
+    .services-content-cnt {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+
+        .services-icon {
+            font-size: 5em;
+            color: $main-darkBlue;
+        }
+
+        .services-h6 {
+            font-size: 1.5em;
+            color: $main-blue;
+            font-weight: normal;
+        }
+
+        .services-p {
+            font-size: 1em;
+            color: $main-blue;
+        }
+    }
+}
+
+.services-content:hover {
+    box-shadow: 0 10px 55px 5px rgba(137, 173, 255, .35);
+    margin-top: -5px;
+}
+
+/* services end */
+
+
+/*------------------------------------*\
+  #RESPONSIVE - START
+\*------------------------------------*/
+
 @media screen and (max-width: 700px) {
 
 
@@ -432,5 +519,110 @@
 
     /* customers carousel end */
 
+    /* c-img-right start */
 
+    .c-img-right-normal {
+        display: none;
+    }
+
+    .c-img-right-responsive {
+        display: block !important;
+
+        .c-img-right-content-left {
+            width: 100%;
+            height: max-content;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .c-img-right-content-right {
+            width: 100%;
+            height: 50%;
+            display: block;
+
+
+
+            .cnt1 {
+                .cnt2 {
+
+
+                    .c-img-right-content-right-cnt {
+                        margin-top: 50%;
+                        width: 100%;
+                        display: inline-block;
+
+                        .cnt1 {
+                            .cnt2 {
+                                text-align: center;
+
+                                img {
+                                    width: 90%;
+                                    position: initial;
+                                    display: inline-block;
+                                    margin-top: 5%;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .c-img-right-content-left-cnt {
+            margin-left: 0;
+            width: 90%;
+
+            h2 {
+                font-size: 9vw;
+                margin-bottom: 5%;
+            }
+
+            p {
+                font-size: 6.1vw;
+                line-height: 35px;
+                font-family: $main-font-description;
+            }
+
+        }
+
+    }
+
+    /* c-img-right end*/
+
+
+    /* services start */
+    .services {
+        height: max-content;
+    }
+
+    .services-child {
+        margin-top: 20%;
+        display: inline-block;
+    }
+
+    .services-content {
+        width: 80%;
+        height: max-content;
+        box-shadow: 0 0px 20px 5px rgba(159, 195, 111, 0.185);
+        padding-top: 20%;
+        padding-bottom: 20%;
+        margin-bottom: 10%;
+
+
+
+        .services-icon {
+            margin-bottom: 10%;
+        }
+
+        .services-h6 {
+            margin-bottom: 10%;
+        }
+
+        .services-p {
+            margin-bottom: 10%;
+        }
+    }
+
+    /* services end */
 }
